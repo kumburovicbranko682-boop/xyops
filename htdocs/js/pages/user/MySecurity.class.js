@@ -82,9 +82,9 @@ Page.MySecurity = class MySecurity extends Page.Base {
 			switch (item.action) {
 				
 				// users
-				case 'user_create':
-					desc = 'User created: <b>' + item.user.username + "</b> (" + item.user.full_name + ")";
-				break;
+			case 'user_create':
+				desc = 'User created: <b>' + encode_entities(item.user.username) + "</b> (" + encode_entities(item.user.full_name) + ")";
+			break;
 				case 'user_update':
 					desc = 'User account details updated.';
 				break;
